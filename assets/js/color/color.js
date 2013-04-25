@@ -6,7 +6,7 @@ function cXYZ(X, Y, Z){
     };
 }
 
-function xyz_from_wavelength (ColorTemp) {
+function xyz_from_wavelength (ColorTemp, illuminant) {
 
     var nmMin = 380;
     var nmMax = 780;
@@ -30,15 +30,15 @@ function xyz_from_wavelength (ColorTemp) {
     for (nm = nmMinIndex; nm <= nmMaxIndex; nm += degrees) {
 
         // calculate X
-        XSum += _CIEXYZ_1931_table[nm][1] * _Illuminant["A"][nm][1] * ColorTemp[mac];
+        XSum += _CIEXYZ_1931_table[nm][1] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
 
         // calculate Y
-        YSum += _CIEXYZ_1931_table[nm][2] * _Illuminant["A"][nm][1] * ColorTemp[mac];
+        YSum += _CIEXYZ_1931_table[nm][2] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
 
         // calculate Z
-        ZSum += _CIEXYZ_1931_table[nm][3] * _Illuminant["A"][nm][1] * ColorTemp[mac];
+        ZSum += _CIEXYZ_1931_table[nm][3] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
 
-        wSum += _CIEXYZ_1931_table[nm][2] * _Illuminant["A"][nm][1];
+        wSum += _CIEXYZ_1931_table[nm][2] * _Illuminant[illuminant][nm][1];
 
         mac++;
 

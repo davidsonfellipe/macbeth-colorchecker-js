@@ -6,23 +6,24 @@ h1 {
     color: #fff;
     font-family: "Helvetica Neue";
     font-size: 50px;
+    text-align: center;
 }
 section {
-    width: 800px;
+    width: 740px;
     margin: 10px auto;
-    text-align: center;
+    text-align: right;
 }
 ul {
     margin: 0;
     padding: 0;
-    width: 500px;
+    text-align: center;
 }
 li {
     border: 5px solid rgba(255, 255, 255, .05);
     border-radius: 5px;
     margin: 5px;
     height: 50px;
-    width: 10%;
+    width: 100px;
     display: inline-block;
 }
 button {
