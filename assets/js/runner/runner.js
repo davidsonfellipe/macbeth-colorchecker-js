@@ -11,7 +11,7 @@ window.onload = function() {
             var colorRGB = corCIEXYZtosRGB(colorxyz);
 
             // debugger;
-            canvas.style.backgroundColor = "rgba(" + 
+            canvas.style.backgroundColor = "rgba(" +
                                             Math.floor(colorRGB.R) + "," +
                                             Math.floor(colorRGB.G) + "," +
                                             Math.floor(colorRGB.B) + ", 1)";
