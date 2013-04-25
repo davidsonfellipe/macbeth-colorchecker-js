@@ -12,10 +12,17 @@ section {
     margin: 10px auto;
     text-align: center;
 }
-canvas {
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
     border: 5px solid rgba(255, 255, 255, .05);
     border-radius: 5px;
     margin: 5px;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
 }
 button {
     display: inline-block;
