@@ -1,7 +1,7 @@
 // table of CIE Illuminant D65 spectrum.
 // data from: http://cvrl.ioo.ucl.ac.uk/database/data/cie/Illuminantd65.txt
 // massaged into this format.
-var _Illuminant_D65_table = [
+_Illuminant["D65"] = [
     // [ 300, 0.034100 ],
     // [ 301, 0.360140 ],
     // [ 302, 0.686180 ],
