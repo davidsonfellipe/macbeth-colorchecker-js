@@ -12,18 +12,25 @@ section {
     width: 740px;
     margin: 10px auto;
     text-align: right;
+    font-size: 0;
 }
-ul {
+.colors {
     margin: 0;
     padding: 0;
     text-align: center;
+    width: 50%;
+    display: inline-block;
 }
 li {
     border: 5px solid rgba(255, 255, 255, .05);
     border-radius: 5px;
     margin: 5px;
     height: 50px;
-    width: 100px;
+    width: 50px;
+    display: inline-block;
+}
+.info {
+    width: 50%;
     display: inline-block;
 }
 button {

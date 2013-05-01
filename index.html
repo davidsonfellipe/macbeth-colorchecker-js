@@ -7,7 +7,7 @@
 <body>
     <section>
         <h1>Macbeth Color Checker</h1>
-        <ul>
+        <ul class="colors">
             <li id="canvas0"></li>
             <li id="canvas1"></li>
             <li id="canvas2"></li>
@@ -33,8 +33,11 @@
             <li id="canvas22"></li>
             <li id="canvas23"></li>
         </ul>
+        <section class="info">
+            <canvas id="canvas" height="450" width="375"></canvas>
+        </section>
         <select id="illuminant">
-            <option value="A">A</option>
+            <!-- <option value="A">A</option> -->
             <option value="D65">D65</option>
         </select>
         <button id="btn-runner">generate</button>
@@ -54,7 +57,7 @@
     <script src="assets/js/color/color.js"></script>
 
     <!-- scripts for runner -->
-    <script src="assets/js/runner/canvas.js"></script>
+    <script src="assets/js/color/chart.min.js"></script>
     <script src="assets/js/runner/runner.js"></script>
 
  </body>
