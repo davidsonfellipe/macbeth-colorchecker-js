@@ -28,20 +28,20 @@ function getChart(colorRGBA, colorMacbethWavelet) {
 
     function printChart(colorRGBA) {
 
-      var cos = [],
+      var dataChart = [],
           wl = 0;
 
       for (var i = 0; i < colorMacbethWavelet.length; i++) {
 
         wl = i * 5;
 
-        cos.push({x: i, y: colorMacbethWavelet[i]});
+        dataChart.push({x: i, y: colorMacbethWavelet[i]});
       }
 
     return [
         {
-          values: cos,
-          key: "for D65",
+          values: dataChart,
+          key: document.getElementById('illuminant').value + " - illuminant",
           color: colorRGBA
         }
       ];
