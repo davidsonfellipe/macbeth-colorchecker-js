@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>labs :: image processing</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <title>Macbeth Color Checker by Davidson Fellipe</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/vendor/nvd3/nv.d3.css">
 </head>
 <body>
-    <section>
+    <section class="macbeth-container">
         <h1>Macbeth Color Checker</h1>
         <ul class="colors">
-            <li id="canvas0"></li>
-            <li id="canvas1"></li>
-            <li id="canvas2"></li>
-            <li id="canvas3"></li>
-            <li id="canvas4"></li>
-            <li id="canvas5"></li>
-            <li id="canvas6"></li>
-            <li id="canvas7"></li>
-            <li id="canvas8"></li>
-            <li id="canvas9"></li>
-            <li id="canvas10"></li>
-            <li id="canvas11"></li>
-            <li id="canvas12"></li>
-            <li id="canvas13"></li>
-            <li id="canvas14"></li>
-            <li id="canvas15"></li>
-            <li id="canvas16"></li>
-            <li id="canvas17"></li>
-            <li id="canvas18"></li>
-            <li id="canvas19"></li>
-            <li id="canvas20"></li>
-            <li id="canvas21"></li>
-            <li id="canvas22"></li>
-            <li id="canvas23"></li>
+            <li class="color" id="canvas-0"></li>
+            <li class="color" id="canvas-1"></li>
+            <li class="color" id="canvas-2"></li>
+            <li class="color" id="canvas-3"></li>
+            <li class="color" id="canvas-4"></li>
+            <li class="color" id="canvas-5"></li>
+            <li class="color" id="canvas-6"></li>
+            <li class="color" id="canvas-7"></li>
+            <li class="color" id="canvas-8"></li>
+            <li class="color" id="canvas-9"></li>
+            <li class="color" id="canvas-10"></li>
+            <li class="color" id="canvas-11"></li>
+            <li class="color" id="canvas-12"></li>
+            <li class="color" id="canvas-13"></li>
+            <li class="color" id="canvas-14"></li>
+            <li class="color" id="canvas-15"></li>
+            <li class="color" id="canvas-16"></li>
+            <li class="color" id="canvas-17"></li>
+            <li class="color" id="canvas-18"></li>
+            <li class="color" id="canvas-19"></li>
+            <li class="color" id="canvas-20"></li>
+            <li class="color" id="canvas-21"></li>
+            <li class="color" id="canvas-22"></li>
+            <li class="color" id="canvas-23"></li>
         </ul>
-        <section class="info">
-            <canvas id="canvas" height="450" width="375"></canvas>
+        <section class="info" id="chart1">
+            <svg class="chart"></svg>
         </section>
+<!--
         <select id="illuminant">
-            <!-- <option value="A">A</option> -->
+            <option value="A">A</option>
             <option value="D65">D65</option>
         </select>
-        <button id="btn-runner">generate</button>
+-->
+<!--    <button id="btn-runner">generate</button> -->
     </section>
 
     <!-- scripts for colors -->
@@ -53,12 +56,22 @@
 
     <!-- patterns -->
     <script src="assets/js/color/ciexyz_1931.js"></script>
-
     <script src="assets/js/color/color.js"></script>
 
-    <!-- scripts for runner -->
-    <script src="assets/js/color/chart.min.js"></script>
-    <script src="assets/js/runner/runner.js"></script>
+    <!-- scripts for nvd3 -->
+    <script src="assets/js/vendor/nvd3/d3.v2.min.js"></script>
+    <script src="assets/js/vendor/nvd3/nv.d3.min.js"></script>
+    <script src="assets/js/vendor/nvd3/tooltip.js"></script>
+    <script src="assets/js/vendor/nvd3/utils.js"></script>
+    <script src="assets/js/vendor/nvd3/models/legend.js"></script>
+    <script src="assets/js/vendor/nvd3/models/axis.js"></script>
+    <script src="assets/js/vendor/nvd3/models/scatter.js"></script>
+    <script src="assets/js/vendor/nvd3/models/line.js"></script>
+    <script src="assets/js/vendor/nvd3/models/lineChart.js"></script>
+    <script src="assets/js/vendor/nvd3/models/lineChart.js"></script>
 
+    <!-- scripts for runner -->
+    <script src="assets/js/runner/config-chart.js"></script>
+    <script src="assets/js/runner/runner.js"></script>
  </body>
 </html>
