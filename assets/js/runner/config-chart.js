@@ -49,11 +49,11 @@ function getChart(colorRGBA, colorMacbethWavelet) {
 
 }
 
-function printColorMacbethWavelet () {
+function printColorMacbethWavelet (illuminant) {
     for(var i = 0; i < 24; i++) {
         var canvas = document.getElementById('canvas-' + i);
 
-        var colorxyz = xyz_from_wavelength(COLOR[i], "D65");
+        var colorxyz = xyz_from_wavelength(COLOR[i], illuminant);
         var colorRGB = corCIEXYZtosRGB(colorxyz);
         var colorRGBA= "rgba(" +
                         Math.floor(colorRGB.R) + "," +
