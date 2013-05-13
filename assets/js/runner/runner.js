@@ -6,11 +6,11 @@ window.onload = function() {
         }, false);
     });
 
-    document.getElementById('illuminant').addEventListener("change", function(){
-        printColorMacbethWavelet (this.value);
+    document.getElementById('cie').addEventListener("change", function(){
+        printColorMacbethWavelet ("D65", this.value);
         document.getElementById("canvas-0").click();
     }, false);
 
-    printColorMacbethWavelet (document.getElementById('illuminant').value);
+    printColorMacbethWavelet ("D65", document.getElementById('cie').value);
     document.getElementById("canvas-0").click();
 };

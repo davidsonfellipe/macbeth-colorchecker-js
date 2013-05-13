@@ -58,17 +58,7 @@ text {
     display: inline-block;
 }
 
-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px;
-    width: 100px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, .5);
-}
-
-.illuminant-container {
+.cie-container {
     text-align: right;
     color: #ccc;
     font-size: 10px;

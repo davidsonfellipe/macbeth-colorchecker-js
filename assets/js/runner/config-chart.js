@@ -41,7 +41,7 @@ function getChart(colorRGBA, colorMacbethWavelet) {
     return [
         {
           values: dataChart,
-          key: document.getElementById('illuminant').value + " - illuminant",
+          key: document.getElementById('cie').value + " - CIE",
           color: colorRGBA
         }
       ];
@@ -49,11 +49,11 @@ function getChart(colorRGBA, colorMacbethWavelet) {
 
 }
 
-function printColorMacbethWavelet (illuminant) {
+function printColorMacbethWavelet (illuminant, currentCIE) {
     for(var i = 0; i < 24; i++) {
         var canvas = document.getElementById('canvas-' + i);
 
-        var colorxyz = xyz_from_wavelength(COLOR[i], illuminant);
+        var colorxyz = xyz_from_wavelength(COLOR[i], illuminant, currentCIE);
         var colorRGB = corCIEXYZtosRGB(colorxyz);
         var colorRGBA= "rgba(" +
                         Math.floor(colorRGB.R) + "," +

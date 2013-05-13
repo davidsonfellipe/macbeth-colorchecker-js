@@ -6,7 +6,7 @@ function cXYZ(X, Y, Z){
     };
 }
 
-function xyz_from_wavelength (ColorTemp, illuminant) {
+function xyz_from_wavelength (ColorTemp, illuminant, currentCIE) {
 
     var nmMin = 380;
     var nmMax = 780;
@@ -16,9 +16,9 @@ function xyz_from_wavelength (ColorTemp, illuminant) {
                y: 0,
                z: 0};
 
-    var nmMinIndex = nmMin - _CIEXYZ_1931_table[0][0];
-    var nmMaxIndex = _CIEXYZ_1931_table.length - 1 -
-                     (_CIEXYZ_1931_table[_CIEXYZ_1931_table.length - 1][0] - nmMax);
+    var nmMinIndex = nmMin - _CIEXYZ[currentCIE][0][0];
+    var nmMaxIndex = _CIEXYZ[currentCIE].length - 1 -
+                     (_CIEXYZ[currentCIE][_CIEXYZ[currentCIE].length - 1][0] - nmMax);
 
     var XSum = 0,
         YSum = 0,
@@ -30,16 +30,16 @@ function xyz_from_wavelength (ColorTemp, illuminant) {
     for (nm = nmMinIndex; nm <= nmMaxIndex; nm += degrees) {
 
         // calculate X
-        XSum += _CIEXYZ_1931_table[nm][1] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
+        XSum += _CIEXYZ[currentCIE][nm][1] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
 
         // calculate Y
-        YSum += _CIEXYZ_1931_table[nm][2] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
+        YSum += _CIEXYZ[currentCIE][nm][2] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
 
         // calculate Z
-        ZSum += _CIEXYZ_1931_table[nm][3] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
+        ZSum += _CIEXYZ[currentCIE][nm][3] * _Illuminant[illuminant][nm][1] * ColorTemp[mac];
 
-        wSum += _CIEXYZ_1931_table[nm][2] * _Illuminant[illuminant][nm][1];
-
+        wSum += _CIEXYZ[currentCIE][nm][2] * _Illuminant[illuminant][nm][1];
+        // _CIEXYZ["1931"] 
         mac++;
 
     }
