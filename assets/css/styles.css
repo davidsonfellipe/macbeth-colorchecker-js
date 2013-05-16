@@ -58,10 +58,11 @@ text {
     display: inline-block;
 }
 
-.cie-container {
+.container {
     text-align: right;
     color: #ccc;
     font-size: 10px;
+    margin: 5px 0;
 }
 
 .fb-likes {

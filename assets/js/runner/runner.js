@@ -3,6 +3,8 @@ window.onload = function() {
     [].forEach.call( document.querySelectorAll('.color'), function(el) {
         el.addEventListener("click", function(){
             getChart(this.style.backgroundColor, COLOR[this.id.replace("canvas-", "")]);
+
+            document.querySelectorAll('.color-container')[0].innerHTML = this.style.backgroundColor;
         }, false);
     });
 
